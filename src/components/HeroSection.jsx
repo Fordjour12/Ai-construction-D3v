@@ -131,6 +131,7 @@ const HeroSection = () => {
 									</Flex>
 								</Box>
 							</Stack>
+							{/* stack done */}
 						</>
 					)
 				})}
