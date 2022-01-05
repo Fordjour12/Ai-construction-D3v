@@ -13,23 +13,25 @@ import {
 	Center,
 } from '@chakra-ui/react'
 
+import check from '../assets/checker.svg'
+
 const heroContent = [
 	{
-		image: 'https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-check-multimedia-kiranshastry-lineal-kiranshastry.png',
+		image: check,
 		header: 'Innovation',
 		number: '1',
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quis quod consectetur adipisci? Vero aut voluptates laudantium dolores omnisexercitationem.',
 	},
 	{
-		image: 'https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-check-multimedia-kiranshastry-lineal-kiranshastry.png',
+		image: check,
 		header: 'Innovation',
 		number: '1',
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quis quod consectetur adipisci? Vero aut voluptates laudantium dolores omnisexercitationem.',
 	},
 	{
-		image: 'https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-check-multimedia-kiranshastry-lineal-kiranshastry.png',
+		image: check,
 		header: 'Innovation',
 		number: '1',
 		description:
@@ -101,37 +103,33 @@ const HeroSection = () => {
 				{heroContent.map((hero, index) => {
 					return (
 						<>
-							{/* <Flex key={index} flexDirection={"column"} py={"10"}>
-                <Flex>
-                  <Image src={hero.image} />
-                  <Heading>{hero.header}</Heading>
-                </Flex>
-                <Flex>
-                  <Heading>{hero.number}</Heading>
-                  <Text>{hero.description}</Text>
-                </Flex>
-              </Flex>
-              <Spacer /> */}
-							<Stack my={'6'} display={{ md: 'none' }}>
-								<Box>
+							<Stack key={index} my={'6'} mx={7}>
+								<Box mb={'3'} ml={'-3'}>
 									<Flex>
 										<Image
+											mr={3}
 											src={hero.image}
 											alt={hero.image}
 										/>
-										<Heading>{hero.header}</Heading>
+										<Heading fontSize={'4xl'}>
+											{hero.header}
+										</Heading>
 									</Flex>
 								</Box>
 								<Box>
 									<Flex>
 										<Heading mr={9}>{hero.number}</Heading>
-										<Text fontSize={'xs'}>
+										<Text
+											fontSize={useBreakpointValue({
+												base: 'xs',
+												md: '',
+											})}
+										>
 											{hero.description}
 										</Text>
 									</Flex>
 								</Box>
 							</Stack>
-							{/* stack done */}
 						</>
 					)
 				})}
