@@ -49,14 +49,25 @@ const Services = () => {
 		<>
 			<Heading mb={9}>Our Services</Heading>
 
-			<Wrap mx={useBreakpointValue({ md: 200 })}>
+			<Wrap mx={useBreakpointValue({ base: 19, md: 200 })}>
 				{serviceContent.map((service, index) => {
 					return (
 						<Stack mt={'6'}>
 							<List key={service.index} styleType={'none'}>
 								<Flex
-									direction={index % 2 === 0 && 'row-reverse'}
+									direction={useBreakpointValue({
+										base: 'column',
+										md: index % 2 === 0 && 'row-reverse',
+									})}
 								>
+									<Image
+										htmlWidth={useBreakpointValue({
+											md: 500,
+										})}
+										fit={'contain'}
+										src={service.image}
+									/>
+
 									<Box ml={'14'}>
 										<Heading my={'4'}>
 											{service.header}
@@ -76,12 +87,6 @@ const Services = () => {
 											</Flex>
 										</Link>
 									</Box>
-
-									<Image
-										htmlWidth={500}
-										fit={'contain'}
-										src={service.image}
-									/>
 								</Flex>
 							</List>
 						</Stack>
