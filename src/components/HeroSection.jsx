@@ -25,15 +25,15 @@ const heroContent = [
 	},
 	{
 		image: check,
-		header: 'Innovation',
-		number: '1',
+		header: 'Sustainable',
+		number: '2',
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quis quod consectetur adipisci? Vero aut voluptates laudantium dolores omnisexercitationem.',
 	},
 	{
 		image: check,
-		header: 'Innovation',
-		number: '1',
+		header: 'Comfortable',
+		number: '3',
 		description:
 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quis quod consectetur adipisci? Vero aut voluptates laudantium dolores omnisexercitationem.',
 	},
